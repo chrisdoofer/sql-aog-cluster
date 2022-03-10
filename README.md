@@ -17,7 +17,7 @@
 
 ## Solution overview
 
-This template uses the PowerShell DSC extension to deploy a fully configured Always On Availability Group with SQL Server 2014 replicas.
+This template uses the PowerShell DSC extension to deploy a fully configured Always On Availability Group with Windows Server 2019 and SQL Server 2019 replicas.
 
 This template creates the following resources:
 
@@ -30,9 +30,8 @@ This template creates the following resources:
 +   1 internal load balancer
 +   1 external load balancer
 +   3 virtual machines in a Windows Server Cluster
-    +    2 SQL Server 2014 Enterprise edition replicas with an availability group
-    +    1 virtual machine is a File Share Witness for the Cluster
-+   2 domain controller virtual machines replicas for a new Forest and Domain
+    +    3 SQL Server 2014 Enterprise edition replicas with an availability group
+    +    2 domain controller virtual machines replicas for a new Forest and Domain
 +   2 Availability Sets
     +     1 for domain controller virtual machines
     +     1 for SQL Server and Witness virtual machines
@@ -49,10 +48,9 @@ This template creates the following resources:
 + 	In default settings for compute require that you have at least 15 cores of free quota to deploy.
 
 + 	The images used to create this deployment are
-	+ 	DC - Latest Windows Server 2012 R2 Image
-	+ 	SQL Server - Latest SQL Server 2014 on Windows Server 2012 R2 Image or Latest SQL Server 2012SP1 on Windows Server 2012 R2 Image
-	+ 	Witness - Latest Windows Server 2012 R2 Image
-
+	+ 	DC - Latest Windows Server 2019 Image
+	+ 	SQL Server - Latest SQL Server 2019 on Windows Server 2019 Image
+	
 + 	Once deployed access can be gained by the public IP address of Primary Domain Controller
 
 
