@@ -28,13 +28,6 @@
       },
       "defaultValue": "Standard_D8s_v3"
     },
-    "witnessVMSize": {
-      "type": "string",
-      "metadata": {
-        "description": "The size of the Witness VM Created"
-      },
-      "defaultValue": "Standard_D2s_v3"
-    },
     "domainName": {
       "type": "string",
       "metadata": {
@@ -208,7 +201,8 @@
         "1",
         "2",
         "3",
-        "4"
+        "4",
+        "5"
       ],
       "metadata": {
         "description": "The Sql VM Disk Size"
@@ -272,7 +266,7 @@
       "sqlImageOffer": "[parameters('sqlServerVersion')]",
       "rdpPort": 3389,
       "windowsDiskSize": 128,
-      "sqlDiskSize": 1000
+      "sqlDiskSize": 5000
     },
     "sqlAOEPName": "[concat(parameters('deploymentPrefix'),'-hadr')]",
     "sharePath": "[concat(parameters('deploymentPrefix'),'-fsw')]",
@@ -610,9 +604,6 @@
           },
           "sqlImageSKU": {
             "value": "[variables(parameters('sqlServerVersion'))]"
-          },
-          "witnessVMSize": {
-            "value": "[parameters('witnessVMSize')]"
           },
           "sqlwVMName": {
             "value": "[variables('vmSettings').sqlwVMName]"
