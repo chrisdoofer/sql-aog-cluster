@@ -1,4 +1,4 @@
-# # Create an Always On Availability Group with SQL Server 2014 replica virtual machines
+# # Create an Always On Availability Group with SQL Server 2019 replica virtual machines
 
 ![Azure Public Test Date](https://azurequickstartsservice.blob.core.windows.net/badges/application-workloads/sql/sqlvm-alwayson-cluster/PublicLastTestDate.svg)
 ![Azure Public Test Result](https://azurequickstartsservice.blob.core.windows.net/badges/application-workloads/sql/sqlvm-alwayson-cluster/PublicDeployment.svg)
