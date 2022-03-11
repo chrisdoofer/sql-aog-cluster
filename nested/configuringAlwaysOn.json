@@ -35,9 +35,6 @@
     "clusterName": {
       "type": "string"
     },
-    "sharePath": {
-      "type": "string"
-    },
     "sqlAOAGName": {
       "type": "string"
     },
@@ -54,9 +51,6 @@
       "type": "string"
     },
     "adPDCVMName": {
-      "type": "string"
-    },
-    "sqlwVMName": {
       "type": "string"
     },
     "numberOfDisks": {

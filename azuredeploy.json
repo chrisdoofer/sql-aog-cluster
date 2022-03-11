@@ -337,8 +337,6 @@
       "adPDCConfigurationFunction": "CreateADPDC.ps1\\CreateADPDC",
       "adBDCModulesURL": "[uri(parameters('_artifactsLocation'), concat('scripts/CreateADBDC.ps1.zip', parameters('_artifactsLocationSasToken')))]",
       "adBDCConfigurationFunction": "CreateADBDC.ps1\\CreateADBDC",
-      "fswModulesURL": "[uri(parameters('_artifactsLocation'), concat('scripts/CreateFileShareWitness.ps1.zip', parameters('_artifactsLocationSasToken')))]",
-      "fswConfigurationFunction": "CreateFileShareWitness.ps1\\CreateFileShareWitness",
       "sqlAOPrepareModulesURL": "[uri(parameters('_artifactsLocation'), concat('scripts/PrepareAlwaysOnSqlServer.ps1.zip', parameters('_artifactsLocationSasToken')))]",
       "sqlAOPrepareConfigurationFunction": "PrepareAlwaysOnSqlServer.ps1\\PrepareAlwaysOnSqlServer",
       "createClusterModulesURL": "[uri(parameters('_artifactsLocation'), concat('scripts/CreateFailoverCluster.ps1.zip', parameters('_artifactsLocationSasToken')))]",
@@ -587,15 +585,6 @@
           "sqlVMSize": {
             "value": "[parameters('sqlVMSize')]"
           },
-          "fswImagePublisher": {
-            "value": "[variables('vmSettings').windowsImagePublisher]"
-          },
-          "fswImageOffer": {
-            "value": "[variables('vmSettings').windowsImageOffer]"
-          },
-          "fswImageSKU": {
-            "value": "[variables('vmSettings').windowsImageSKU]"
-          },
           "sqlImagePublisher": {
             "value": "[variables('vmSettings').sqlImagePublisher]"
           },
@@ -604,12 +593,6 @@
           },
           "sqlImageSKU": {
             "value": "[variables(parameters('sqlServerVersion'))]"
-          },
-          "sqlwVMName": {
-            "value": "[variables('vmSettings').sqlwVMName]"
-          },
-          "sqlwNicName": {
-            "value": "[variables('sqlwNicName')]"
           }
         }
       }
@@ -916,12 +899,6 @@
           "sqlwVMName": {
             "value": "[variables('vmSettings').sqlwVMName]"
           },
-          "fswModulesURL": {
-            "value": "[variables('configuration').fswModulesURL]"
-          },
-          "fswConfigurationFunction": {
-            "value": "[variables('configuration').fswConfigurationFunction]"
-          },
           "autoPatchingDay": {
             "value": "[parameters('autoPatchingDay')]"
           },
@@ -987,9 +964,6 @@
           "clusterName": {
             "value": "[variables('clusterName')]"
           },
-          "sharePath": {
-            "value": "[variables('sharePath')]"
-          },
           "sqlAOAGName": {
             "value": "[parameters('sqlAOAGName')]"
           },
@@ -1007,9 +981,6 @@
           },
           "adPDCVMName": {
             "value": "[variables('vmSettings').adPDCVMName]"
-          },
-          "sqlwVMName": {
-            "value": "[variables('vmSettings').sqlwVMName]"
           },
           "numberOfDisks": {
             "value": "[parameters('numberOfSqlVMDisks')]"
